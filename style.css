@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+  }
+  
+  .card {
+    width: 350px;
+    height: 350px;
+    position: relative;
+    perspective: 2000px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s;
+    position: relative;
+  }
+  
+  .wrapper {
+    transition: all 0.3s;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .card:hover .wrapper {
+    box-shadow: 15px 75px 34px 12px rgba(0, 0, 0, 0.8);
+    transform: translateY(-3%) rotateX(30deg) translateZ(0);
+    filter: blur(1.5px);
+  }
+  
+  .gold {
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .card:hover .gold {
+    opacity: 1;
+    transform: translate3d(0%, -15%, 80px);
+    z-index: 3;
+  }
+  
+  .overlay {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: transparent;
+    z-index: 2;
+    transition: all 0.3s;
+    box-shadow: inset 0px -27px 23px -10px rgba(0, 0, 0, 1);
+    -moz-box-shadow: inset 0px -27px 23px -10px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: inset 0px -25px 23px -10px rgba(0, 0, 0, 1);
+  }
+  
+  .overlay-hoverr {
+    transform: translateY(-3%) rotateX(30deg) translateZ(0);
+    box-shadow: inset 0px 27px 13px -10px rgba(0, 0, 0, 1),
+      inset 0px -27px 13px -20px rgba(0, 0, 0, 1);
+    -moz-box-shadow: inset 0px 27px 13px -10px rgba(0, 0, 0, 1),
+      inset 0px -27px 13px -20px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: inset 0px 27px 13px -10px rgba(0, 0, 0, 1),
+      inset 0px -27px 13px -20px rgba(0, 0, 0, 1);
+  }
+
+  
